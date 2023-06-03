@@ -1,0 +1,291 @@
+package translate;
+
+import java_cup.runtime.Symbol;
+
+parser code
+
+{:
+
+//permite retornar
+
+    private Symbol s;
+
+public void syntax_error(Symbol s){
+this.s = s;
+}
+
+public Symbol getS(){
+return this.s;
+}
+:};
+
+
+
+terminal  futbol, blanco, trabajar, correr, ir, tomar, quedarse,
+    volar, semana, mes, año, lunes, martes, miercoles, jueves, viernes,
+    sabado, domingo, enero, febrero, marzo, abril, mayo, junio, julio,
+    agosto, septiembre, octubre, noviembre, diciembre, 
+    comer, bailar, aceptar, preguntar, empezar, romper, traer, construir, comprar,
+    llamar, cancelar, llevar, atrapar, cambiar, escoger, cerrar, 
+    venir, cortar, decidir, hacer, dibujar, beber, conducir,
+    explicar, sentir, llenar,  encontrar, terminar, encajar, reparar, olvidar,
+    conseguir, dar, tener, oir, golpear, dañar, mantener, saber, dejar, aprender,
+    decir, hablar, pensar, ver, querer, mirar, intentar, necesitar, poner,
+    significar, ayudar, girar, comenzar, mostar, escuchar, jugar, mover, gustar, vivir,
+    creer, sostener, escribir, proveer, sentarse, perder, ganar, pagar,
+    reunirse, incluir, ajustar, liderar, comprender, seguir, parar, crear, leer,
+    permitir, añadir, gastar, crecer, abrir, caminar,
+    ofrecer, recordar, amar, consider, resperar, enfadado, feliz, triste, hambriento, sediento, cansado, 
+    soñoliento, aburrido,
+    emocionado, molesto, avergonzado, agradecido, entretenido, indignado, irritado,
+    ansioso, inquieto, cauteloso, terco, comodo, seguro, confundido, desanimado, valiente, confiado,
+    celoso, calmado, orgulloso, atento, arrogante, ambicioso, artistico, gruñon, mandon,
+    carismatico, sociable, fiable, sincero, educado, rudo,amigable, generoso,
+    torpe, despistado, alegre, travieso, mimado, animado, precioso, creativo,
+    imaginativo, trabajador, atractivo, listo, tranquilo, humilde, tacaño,
+    rico, encantador, guapo, estupido, quisquilloso, despiadado, feo, joven, liso, suave,
+    duro, aspero,pesado, ligero, sucio, radiante, oscuro, hueco, solido, minusculo,
+    largo, corto, afilado, desafilado, grueso, fino, ancho, cerca, lejos, temprano,
+    tarde, Igual, Suma, Resta,Multiplicacion, Division, Inexistentes, Numero, ERROR;
+
+
+non terminal INICIO, SETENCIA, DECLARACION;
+
+start with INICIO;
+INICIO::=
+cama|factura|pájaro|sangre|bote|cuerpo|hueso|libro|fondo|caja|niño|
+hermano|edificio|negocio|llamada|capital|caso|gato|causa|centavo|centro|
+siglo|oportunidad|cambio|verificación|iglesia|círculo|ciudad|clase|ropa|
+nube|costa|color|compañía|consonante|copia|maíz|algodón|país|curso|vaca|
+multitud|día|diccionario|dirección|distancia|doctor|dólar|puerta|oreja|
+tierra|huevo|energía|ejemplo|experiencia|ojo|juego|jardín|gas|niña|vidrio|
+oro|gobierno|césped|grupo|cabello|mano|sombrero|cabeza|corazón|calor|historia|
+agujero|hogar|caballo|hora|casa|hielo|idea|pulgada|banco|industria|información|
+insecto|interés|hierro|isla|trabajo|clave|lago|lenguaje|ley|pierna|nivel|mentira|
+vida|luz|línea|lista|máquina|hombre|mapa|material|carne|medio|milla|leche|mente|minuto|
+dinero|mes|luna|boca|música|nación|noche|nariz|nota|número|objeto|océano|oficina|
+párrafo|parque|parte|fiesta|pasado|persona|libra|presidente|problema|producto|
+propiedad|pregunta|carrera|radio|lluvia|razón|registro|región|anillo|río|carretera|
+roca|fila|regla|arena|escuela|ciencia|mar|asiento|segunda|oración|conjunto|lado|
+señal|hermana|tamaño|piel|nieve|soldado|solución|acción|edad|aire|animal|respuesta|
+manzana|arte|bebé|espalda|pelota|página|par|papel|hijo|primavera|cuadrado|estrella|
+estado|detener|calle|estudiante|azúcar|sol|pueblo|vocal|guerra|clima|peso|
+esposa|ventana|invierno|mujer|palabra|mundo|año|mi|tu|su|nuestro|vuestro|
+este|ese|estos|esos|alto|elevado|bajo|largo|grande|en|forma|pequeño|triste|
+nojado|feliz|nervioso|molesto|loco|hambriento|comprensivo|redondo|triangular|
+afilado|rectangular|ancho|sensible|amistoso|educado|perezoso|inteligente|agradable|
+sucio|mojado|seco|apestoso|genial|saludable|caliente|frío|ruidoso|dulce|salado|
+amargo|agrio|delicios
+     futbol|
+    blanco|
+    trabajar|
+    correr|
+    ir|
+    tomar|
+    quedarse|
+    volar|
+    semana|
+    mes|
+    año|
+    lunes|
+    martes|
+    miercoles|
+    jueves|
+    viernes|
+    sabado|
+    domingo|
+    enero|
+    febrero|
+    marzo|
+    abril|
+    mayo|
+    junio|
+    julio|
+    agosto|
+    septiembre|
+    octubre|
+    noviembre| 
+    diciembre|
+    comer|
+    bailar|
+    aceptar|
+    preguntar|
+    empezar|
+    romper|
+    traer|
+    construir|
+    comprar|
+    llamar|
+    cancelar|
+    llevar|
+    atrapar|
+    cambiar|
+    escoger|
+    cerrar|
+    venir|
+    cortar|
+    decidir|
+    hacer|
+    dibujar|
+    beber|
+    conducir|
+    explicar|
+    sentir|
+    llenar| 
+    encontrar|
+    terminar| 
+    encajar|
+    reparar|
+    olvidar|
+    conseguir|
+    dar|
+    tener|
+    oir|
+    golpear|
+    dañar|
+    mantener|
+    saber|
+    dejar|
+    aprender|
+    decir|
+    hablar|
+    pensar|
+    ver|
+    querer|
+    mirar|
+    intentar|
+    necesitar|
+    poner|
+    significar|
+    ayudar|
+    girar|
+    comenzar|
+    mostar|
+    escuchar|
+    jugar|
+    mover|
+    gustar|
+    vivir|
+    creer|
+    sostener|
+    escribir|
+    proveer|
+    sentarse|
+    perder|
+    ganar|
+    pagar|
+    reunirse|
+    incluir|
+    ajustar|
+    liderar|
+    comprender|
+    seguir|
+    parar|
+    crear|
+    leer|
+    permitir|
+    añadir|
+    gastar|
+    crecer|
+    abrir|
+    caminar|
+    ofrecer|
+    recordar|
+    amar|
+    consider|
+    resperar|
+    enfadado|
+    feliz|
+    triste|
+    hambriento|
+    sediento|
+    cansado|
+    soñoliento|
+    aburrido|
+    emocionado|
+    molesto|
+    avergonzado|
+    agradecido|
+    entretenido|
+    indignado|
+    irritado|
+    ansioso|
+    inquieto|
+    cauteloso|
+    terco|
+    comodo|
+    seguro|
+    confundido|   
+    desanimado| 
+    valiente|
+    confiado|
+    celoso|
+    calmado|
+    orgulloso|
+    atento|
+    arrogante|
+    ambicioso|
+    artistico|
+    gruñon|
+    mandon|
+    carismatico|
+    sociable|
+    fiable|
+    sincero|
+    educado|
+    rudo|
+    amigable|
+    generoso|
+    torpe| 
+    despistado|
+    alegre|
+    travieso|
+    mimado|
+    animado|
+    precioso|
+    creativo|
+    imaginativo|
+    trabajador|
+    atractivo| 
+    listo|
+    tranquilo|
+    humilde|
+    tacaño|
+    rico|
+    encantador|
+    guapo|
+    estupido|
+    quisquilloso|
+    despiadado|
+    feo|
+    joven|
+    liso|
+    suave|
+    duro|
+    aspero|
+    pesado|
+    ligero|
+    sucio|
+    radiante|
+    oscuro|
+    hueco|
+    solido|
+    minusculo|
+    largo|
+    corto|
+    afilado|
+    desafilado|
+    grueso|
+    fino|
+    ancho|
+    cerca|
+    lejos|
+    temprano|
+    tarde| sustantivo Pron_Demostrativo ADB_Tiempo ADB_Lugar Preposicion |
+    PRON_PER_SING VER_AM Ad_Calificativo |
+    SUJETO PREDICADO
+    
+    
+    
+;
+
